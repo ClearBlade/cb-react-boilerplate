@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme, CssBaseline } from "@material-ui/core";
 import { appRoutes } from "./routes";
@@ -31,7 +31,7 @@ const theme = createMuiTheme();
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <AppShell>
@@ -41,7 +41,7 @@ function App() {
           </Routes>
         </AppShell>
       </MuiThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

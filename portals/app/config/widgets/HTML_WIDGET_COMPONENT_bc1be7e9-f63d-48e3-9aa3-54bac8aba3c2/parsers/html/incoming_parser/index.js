@@ -55297,7 +55297,7 @@ if (false) {}
 var App_theme = Object(createMuiTheme["a" /* default */])();
 
 function App() {
-  return /*#__PURE__*/external_React_default.a.createElement(react_router_dom_w, null, /*#__PURE__*/external_React_default.a.createElement(ThemeProvider_ThemeProvider, {
+  return /*#__PURE__*/external_React_default.a.createElement(react_router_dom_x, null, /*#__PURE__*/external_React_default.a.createElement(ThemeProvider_ThemeProvider, {
     theme: App_theme
   }, /*#__PURE__*/external_React_default.a.createElement(CssBaseline_CssBaseline, null), /*#__PURE__*/external_React_default.a.createElement(App_AppShell, null, /*#__PURE__*/external_React_default.a.createElement(react_router_E, null, /*#__PURE__*/external_React_default.a.createElement(react_router_D, {
     path: appRoutes.DASHBOARD,
