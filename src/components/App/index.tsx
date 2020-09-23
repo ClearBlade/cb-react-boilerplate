@@ -8,22 +8,24 @@ import Dashboard from "../../pages/Dashboard/Dashboard";
 import OrdersPage from "../../pages/Orders";
 import cb from "../../utils/cb";
 
-window.CB_PORTAL = {
-  ClearBlade: cb,
-};
+if (process.env.NODE_ENV !== "production") {
+  window.CB_PORTAL = {
+    ClearBlade: cb,
+  };
 
-window.CB_PORTAL.ClearBlade.init({
-  URI: "http://127.0.0.1:9000",
-  messagingURI: "127.0.0.1",
-  systemKey: "f0fdddf60bbae1ebb8c6e5f3a9a901",
-  systemSecret: "F0FDDDF60BBE82A0ADC988EFD359",
-  useUser: {
-    email: "demoSimulator@clearblade.com",
-    authToken:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJmYWZlZGRmNjBiZjZkZmI5OTA5NGMyOTI4NGQwMDEiLCJzaWQiOiI4N2M1ZWZlNC1mZjg0LTQyMzgtYmQyMi01ZTdlYmViMmY4YjIiLCJ1dCI6MiwidHQiOjEsImV4cCI6LTEsImlhdCI6MTYwMDg5Njk1N30.WDum4Eg2rbm9jYrpdviCnmHX0zuZb_88q_KdmyY7GB8",
-  },
-  messagingPort: 8903,
-});
+  window.CB_PORTAL.ClearBlade.init({
+    URI: "http://127.0.0.1:9000",
+    messagingURI: "127.0.0.1",
+    systemKey: "f0fdddf60bbae1ebb8c6e5f3a9a901",
+    systemSecret: "F0FDDDF60BBE82A0ADC988EFD359",
+    useUser: {
+      email: "demoSimulator@clearblade.com",
+      authToken:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJmYWZlZGRmNjBiZjZkZmI5OTA5NGMyOTI4NGQwMDEiLCJzaWQiOiI4N2M1ZWZlNC1mZjg0LTQyMzgtYmQyMi01ZTdlYmViMmY4YjIiLCJ1dCI6MiwidHQiOjEsImV4cCI6LTEsImlhdCI6MTYwMDg5Njk1N30.WDum4Eg2rbm9jYrpdviCnmHX0zuZb_88q_KdmyY7GB8",
+    },
+    messagingPort: 8903,
+  });
+}
 
 const theme = createMuiTheme();
 
