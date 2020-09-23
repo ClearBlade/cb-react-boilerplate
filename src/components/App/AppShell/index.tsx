@@ -12,6 +12,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import clsx from "clsx";
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { appRoutes } from "../routes";
 import { mainListItems, secondaryListItems } from "./listItems";
 
 const drawerWidth = 240;
@@ -131,8 +133,14 @@ const AppShell: React.FC = ({ children }) => {
             noWrap
             className={classes.title}
           >
-            {/* todo: make this a Route */}
-            Dashboard
+            <Routes>
+              <Route
+                path={appRoutes.DASHBOARD}
+                element={<div>Dashboard</div>}
+              />
+              <Route path={appRoutes.ORDERS} element={<div>Orders</div>} />
+              <Route path={appRoutes.TODO} element={<div>TODO</div>} />
+            </Routes>
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
