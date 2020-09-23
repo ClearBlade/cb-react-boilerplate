@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { createMuiTheme, CssBaseline } from "@material-ui/core";
+import { createMuiTheme, CssBaseline, Typography } from "@material-ui/core";
 import { appRoutes } from "./routes";
 import AppShell from "./AppShell";
 import Dashboard from "../../pages/Dashboard/Dashboard";
@@ -38,6 +38,17 @@ function App() {
           <Routes>
             <Route path={appRoutes.DASHBOARD} element={<Dashboard />}></Route>
             <Route path={appRoutes.ORDERS} element={<OrdersPage />}></Route>
+            <Route
+              path={appRoutes.TODO}
+              element={
+                <Typography>
+                  TODO: What will you build??{" "}
+                  <span role="img" aria-label="smile">
+                    😁
+                  </span>
+                </Typography>
+              }
+            ></Route>
           </Routes>
         </AppShell>
       </MuiThemeProvider>
