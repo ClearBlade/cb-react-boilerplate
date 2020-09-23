@@ -1,0 +1,9 @@
+{
+    "auth": true,
+    "description": "",
+    "messaging_url": "127.0.0.1:1883",
+    "name": "cb-react-boilerplate",
+    "platform_url": "http://127.0.0.1:9000",
+    "system_key": "f0fdddf60bbae1ebb8c6e5f3a9a901",
+    "system_secret": "F0FDDDF60BBE82A0ADC988EFD359"
+}

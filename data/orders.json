@@ -1,0 +1,61 @@
+{
+    "items": [
+        {
+            "date": "2020-09-20T21:54:57.302Z",
+            "item_id": "0d633dd1-0e65-47d7-bed3-577084d5df32",
+            "name": "Elvis Presley",
+            "payment_method": "",
+            "sale_amount": 638.65002,
+            "ship_to": ""
+        },
+        {
+            "date": "2020-09-21T21:55:01.252Z",
+            "item_id": "61086b9a-d717-4639-b022-fbe8e972188e",
+            "name": "Billy Cobham",
+            "payment_method": "",
+            "sale_amount": 933.21002,
+            "ship_to": ""
+        },
+        {
+            "date": "2020-09-22T21:55:04.444Z",
+            "item_id": "7743d157-c3a8-4d04-98bc-d7c1dd360426",
+            "name": "Larnell Lewis",
+            "payment_method": "",
+            "sale_amount": 1048.99,
+            "ship_to": ""
+        }
+    ],
+    "name": "orders",
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "date",
+            "ColumnType": "timestamp",
+            "PK": false
+        },
+        {
+            "ColumnName": "name",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "sale_amount",
+            "ColumnType": "float",
+            "PK": false
+        },
+        {
+            "ColumnName": "ship_to",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "payment_method",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
