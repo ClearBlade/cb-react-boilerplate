@@ -1,0 +1,5 @@
+{
+    "cb_service_account": true,
+    "cb_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJmYWZlZGRmNjBiZjZkZmI5OTA5NGMyOTI4NGQwMDEiLCJzaWQiOiI4N2M1ZWZlNC1mZjg0LTQyMzgtYmQyMi01ZTdlYmViMmY4YjIiLCJ1dCI6MiwidHQiOjEsImV4cCI6LTEsImlhdCI6MTYwMDg5Njk1N30.WDum4Eg2rbm9jYrpdviCnmHX0zuZb_88q_KdmyY7GB8",
+    "email": "service@cb.com"
+}
