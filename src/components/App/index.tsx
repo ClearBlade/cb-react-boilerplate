@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== "production") {
     systemKey: "f0fdddf60bbae1ebb8c6e5f3a9a901",
     systemSecret: "F0FDDDF60BBE82A0ADC988EFD359",
     useUser: {
-      email: "demoSimulator@clearblade.com",
+      email: "service@cb.com",
       authToken:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJmYWZlZGRmNjBiZjZkZmI5OTA5NGMyOTI4NGQwMDEiLCJzaWQiOiI4N2M1ZWZlNC1mZjg0LTQyMzgtYmQyMi01ZTdlYmViMmY4YjIiLCJ1dCI6MiwidHQiOjEsImV4cCI6LTEsImlhdCI6MTYwMDg5Njk1N30.WDum4Eg2rbm9jYrpdviCnmHX0zuZb_88q_KdmyY7GB8",
     },
