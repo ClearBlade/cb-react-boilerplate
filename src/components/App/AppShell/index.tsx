@@ -15,6 +15,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { appRoutes } from "../routes";
 import { mainListItems, secondaryListItems } from "./listItems";
+import { ErrorBoundary } from "react-error-boundary";
+import { Alert } from "@material-ui/lab";
+import { Button } from "@material-ui/core";
 
 const drawerWidth = 240;
 
@@ -99,6 +102,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const ErrorFallback: React.FC<{
+  error: Error;
+  resetErrorBoundary: () => void;
+}> = ({ error, resetErrorBoundary }) => {
+  return (
+    <Alert
+      severity="error"
+      action={<Button onClick={resetErrorBoundary}>Try again</Button>}
+    >
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+    </Alert>
+  );
+};
+
 const AppShell: React.FC = ({ children }) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -171,7 +189,12 @@ const AppShell: React.FC = ({ children }) => {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        {children}
+        <ErrorBoundary
+          // @ts-ignore
+          FallbackComponent={ErrorFallback}
+        >
+          {children}
+        </ErrorBoundary>
       </main>
     </div>
   );
