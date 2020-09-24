@@ -32,7 +32,9 @@ export const ChatInput: React.FC<ChatInputProps> = ({ onSubmit }) => {
       onSubmit={(e) => {
         e.preventDefault();
         setValue("");
-        onSubmit(value);
+        if (value) {
+          onSubmit(value);
+        }
       }}
     >
       <OutlinedInput
