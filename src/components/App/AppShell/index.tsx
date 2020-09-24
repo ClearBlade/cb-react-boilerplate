@@ -160,6 +160,10 @@ const AppShell: React.FC = ({ children }) => {
               />
               <Route path={appRoutes.ORDERS} element={<div>Orders</div>} />
               <Route path={appRoutes.CHAT} element={<div>Chat</div>} />
+              <Route
+                path={appRoutes.SCOA_SMDS}
+                element={<div>SCOA-SMDS</div>}
+              />
               <Route path={appRoutes.TODO} element={<div>TODO</div>} />
             </Routes>
           </Typography>

@@ -1,10 +1,10 @@
 import ListSubheader from "@material-ui/core/ListSubheader";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import BarChartIcon from "@material-ui/icons/BarChart";
+import BrushIcon from "@material-ui/icons/Brush";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import LayersIcon from "@material-ui/icons/Layers";
 import MessageIcon from "@material-ui/icons/Message";
-import PeopleIcon from "@material-ui/icons/People";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import React from "react";
 import { appRoutes } from "../routes";
@@ -24,9 +24,9 @@ export const mainListItems = (
     />
     <DrawerNavItem path={appRoutes.CHAT} label="Chat" icon={<MessageIcon />} />
     <DrawerNavItem
-      path={appRoutes.TODO}
-      label="Customers"
-      icon={<PeopleIcon />}
+      path={appRoutes.SCOA_SMDS}
+      label="SCOA-SMDS"
+      icon={<BrushIcon />}
     />
     <DrawerNavItem
       path={appRoutes.TODO}

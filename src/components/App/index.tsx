@@ -14,6 +14,13 @@ import Dashboard from "../../pages/Dashboard/Dashboard";
 import OrdersPage from "../../pages/Orders";
 import cb from "../../utils/cb";
 import { ChatPage } from "../../pages/Chat";
+import { ThemeProvider } from "styled-components";
+import {
+  defaultTheme,
+  GlobalStyles,
+  // @ts-ignore
+} from "@gohypergiant/scoa-smds";
+import { ScoaSmdsPage } from "../../pages/ScoaSmds";
 
 if (process.env.NODE_ENV !== "production") {
   window.CB_PORTAL = {
@@ -43,29 +50,39 @@ const generateClassName = createGenerateClassName({
 function App() {
   return (
     <HashRouter>
-      <MuiThemeProvider theme={theme}>
-        <StylesProvider generateClassName={generateClassName}>
-          <CssBaseline />
-          <AppShell>
-            <Routes>
-              <Route path={appRoutes.DASHBOARD} element={<Dashboard />}></Route>
-              <Route path={appRoutes.ORDERS} element={<OrdersPage />}></Route>
-              <Route path={appRoutes.CHAT} element={<ChatPage />}></Route>
-              <Route
-                path={appRoutes.TODO}
-                element={
-                  <Typography>
-                    TODO: What will you build??{" "}
-                    <span role="img" aria-label="smile">
-                      😁
-                    </span>
-                  </Typography>
-                }
-              ></Route>
-            </Routes>
-          </AppShell>
-        </StylesProvider>
-      </MuiThemeProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyles />
+        <MuiThemeProvider theme={theme}>
+          <StylesProvider generateClassName={generateClassName}>
+            <CssBaseline />
+            <AppShell>
+              <Routes>
+                <Route
+                  path={appRoutes.DASHBOARD}
+                  element={<Dashboard />}
+                ></Route>
+                <Route path={appRoutes.ORDERS} element={<OrdersPage />}></Route>
+                <Route path={appRoutes.CHAT} element={<ChatPage />}></Route>
+                <Route
+                  path={appRoutes.SCOA_SMDS}
+                  element={<ScoaSmdsPage />}
+                ></Route>
+                <Route
+                  path={appRoutes.TODO}
+                  element={
+                    <Typography>
+                      TODO: What will you build??{" "}
+                      <span role="img" aria-label="smile">
+                        😁
+                      </span>
+                    </Typography>
+                  }
+                ></Route>
+              </Routes>
+            </AppShell>
+          </StylesProvider>
+        </MuiThemeProvider>
+      </ThemeProvider>
     </HashRouter>
   );
 }

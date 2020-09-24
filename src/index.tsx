@@ -2,6 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
+// @ts-ignore
+import { defaultTheme, insertCustomProperties } from "@gohypergiant/scoa-smds";
+
+if (!document.querySelector("[data-css-variables]")) {
+  insertCustomProperties(defaultTheme);
+}
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "../../../../../../../../components/App";
+// @ts-ignore
+import { defaultTheme, insertCustomProperties } from "@gohypergiant/scoa-smds";
 
 export function disableStyleSheets() {
   Object.keys(document.styleSheets).forEach((k) => {
@@ -10,6 +12,9 @@ export function disableStyleSheets() {
 
 const EntryPoint: () => React.FC<{}> = () => {
   disableStyleSheets();
+  if (!document.querySelector("[data-css-variables]")) {
+    insertCustomProperties(defaultTheme);
+  }
   return () => <App />;
 };
 

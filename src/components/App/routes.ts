@@ -3,4 +3,5 @@ export enum appRoutes {
   ORDERS = "orders",
   CHAT = "chat",
   TODO = "todo",
+  SCOA_SMDS = "scoa-smds",
 }
