@@ -1,12 +1,6 @@
 # ClearBlade React Boilerplate
 
-Welcome to the ClearBlade React boilerplate project! This repository demonstrates a few common use cases of interacting with the ClearBlade platform via React app and the ClearBlade [JavaScript SDK](https://github.com/clearblade/JavaScript-API). You can develop the app locally with Create React App and when you're ready, build and push the app to a ClearBlade portal.
-
-![Dashboard](/img/dashboard.png)
-
-![Orders](/img/orders.png)
-
-![Chat](/img/chat.png)
+Welcome to the ClearBlade React boilerplate project! This repository demonstrates a few common use cases of interacting with the ClearBlade platform via React app and the ClearBlade [JavaScript SDK](https://github.com/clearblade/JavaScript-API). You can develop the app locally with Create React App, and when you're ready, build and push the app to a ClearBlade portal. The UI is based on a Material-UI [template](https://material-ui.com/getting-started/templates/dashboard/).
 
 #### Table of contents
 
@@ -14,6 +8,12 @@ Welcome to the ClearBlade React boilerplate project! This repository demonstrate
 - [Todo](#todo)
 - [Usage](#usage)
 - [Create React App README](#available-scripts)
+
+![Dashboard](/img/dashboard.png)
+
+![Orders](/img/orders.png)
+
+![Chat](/img/chat.png)
 
 ## Use cases
 
@@ -28,6 +28,7 @@ Here's a list of use cases that we'd like to demonstrate in the future
 
 - Custom login screen
 - Updating collections
+- Translations with [react-intl](https://github.com/formatjs/formatjs)
 
 ## Usage
 
