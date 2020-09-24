@@ -7,6 +7,7 @@ import AppShell from "./AppShell";
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import OrdersPage from "../../pages/Orders";
 import cb from "../../utils/cb";
+import { ChatPage } from "../../pages/Chat";
 
 if (process.env.NODE_ENV !== "production") {
   window.CB_PORTAL = {
@@ -38,6 +39,7 @@ function App() {
           <Routes>
             <Route path={appRoutes.DASHBOARD} element={<Dashboard />}></Route>
             <Route path={appRoutes.ORDERS} element={<OrdersPage />}></Route>
+            <Route path={appRoutes.CHAT} element={<ChatPage />}></Route>
             <Route
               path={appRoutes.TODO}
               element={

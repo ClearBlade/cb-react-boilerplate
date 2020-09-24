@@ -17,6 +17,7 @@
     "clsx": "^1.1.1",
     "history": "^5.0.0",
     "react": "^16.13.1",
+    "react-chat-ui": "^0.4.0",
     "react-dom": "^16.13.1",
     "react-hooks-async": "^3.10.1",
     "react-router-dom": "^6.0.0-beta.0",

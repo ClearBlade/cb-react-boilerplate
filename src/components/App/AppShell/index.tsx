@@ -81,6 +81,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     height: "100vh",
     overflow: "auto",
+    display: "flex",
+    flexDirection: "column",
   },
   container: {
     paddingTop: theme.spacing(4),
@@ -139,6 +141,7 @@ const AppShell: React.FC = ({ children }) => {
                 element={<div>Dashboard</div>}
               />
               <Route path={appRoutes.ORDERS} element={<div>Orders</div>} />
+              <Route path={appRoutes.CHAT} element={<div>Chat</div>} />
               <Route path={appRoutes.TODO} element={<div>TODO</div>} />
             </Routes>
           </Typography>

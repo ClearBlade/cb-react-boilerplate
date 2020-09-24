@@ -3,6 +3,7 @@ import AssignmentIcon from "@material-ui/icons/Assignment";
 import BarChartIcon from "@material-ui/icons/BarChart";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import LayersIcon from "@material-ui/icons/Layers";
+import MessageIcon from "@material-ui/icons/Message";
 import PeopleIcon from "@material-ui/icons/People";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import React from "react";
@@ -21,6 +22,7 @@ export const mainListItems = (
       label="Orders"
       icon={<ShoppingCartIcon />}
     />
+    <DrawerNavItem path={appRoutes.CHAT} label="Chat" icon={<MessageIcon />} />
     <DrawerNavItem
       path={appRoutes.TODO}
       label="Customers"
