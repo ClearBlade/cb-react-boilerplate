@@ -59359,7 +59359,7 @@ var Chat_ChatPage = function ChatPage() {
   var msgRef = Object(external_React_["useRef"])();
   Object(external_React_["useEffect"])(function () {
     msgRef.current = window.CB_PORTAL.ClearBlade.Messaging({
-      useSSL: false,
+      useSSL: window.location.protocol === "https:" ? true : false,
       maxConnectRetries: 2
     }, function (err, body) {
       if (err) {

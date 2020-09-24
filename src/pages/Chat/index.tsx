@@ -37,7 +37,10 @@ export const ChatPage: React.FC = () => {
   const msgRef = useRef<Messaging>();
   useEffect(() => {
     msgRef.current = window.CB_PORTAL.ClearBlade.Messaging(
-      { useSSL: false, maxConnectRetries: 2 },
+      {
+        useSSL: window.location.protocol === "https:" ? true : false,
+        maxConnectRetries: 2,
+      },
       (err, body) => {
         if (err) {
           setMessagingError("Uh oh! Failed to connect to Messaging");
