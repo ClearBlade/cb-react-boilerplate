@@ -2,6 +2,10 @@
 
 Welcome to the ClearBlade React boilerplate project! This repository demonstrates a few common use cases of interacting with the ClearBlade platform via React app and the ClearBlade [JavaScript SDK](https://github.com/clearblade/JavaScript-API). You can develop the app locally with Create React App and when you're ready, build and push the app to a ClearBlade portal.
 
+![Dashboard](/img/dashboard.png)
+![Orders](/img/orders.png)
+![Chat](/img/chat.png)
+
 #### Table of contents
 
 - [Use cases](#use-cases)

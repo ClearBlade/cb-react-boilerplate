@@ -1,7 +1,13 @@
 import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { createMuiTheme, CssBaseline, Typography } from "@material-ui/core";
+import {
+  createGenerateClassName,
+  createMuiTheme,
+  CssBaseline,
+  StylesProvider,
+  Typography,
+} from "@material-ui/core";
 import { appRoutes } from "./routes";
 import AppShell from "./AppShell";
 import Dashboard from "../../pages/Dashboard/Dashboard";
@@ -30,29 +36,35 @@ if (process.env.NODE_ENV !== "production") {
 
 const theme = createMuiTheme();
 
+const generateClassName = createGenerateClassName({
+  productionPrefix: "my-app",
+});
+
 function App() {
   return (
     <HashRouter>
       <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        <AppShell>
-          <Routes>
-            <Route path={appRoutes.DASHBOARD} element={<Dashboard />}></Route>
-            <Route path={appRoutes.ORDERS} element={<OrdersPage />}></Route>
-            <Route path={appRoutes.CHAT} element={<ChatPage />}></Route>
-            <Route
-              path={appRoutes.TODO}
-              element={
-                <Typography>
-                  TODO: What will you build??{" "}
-                  <span role="img" aria-label="smile">
-                    😁
-                  </span>
-                </Typography>
-              }
-            ></Route>
-          </Routes>
-        </AppShell>
+        <StylesProvider generateClassName={generateClassName}>
+          <CssBaseline />
+          <AppShell>
+            <Routes>
+              <Route path={appRoutes.DASHBOARD} element={<Dashboard />}></Route>
+              <Route path={appRoutes.ORDERS} element={<OrdersPage />}></Route>
+              <Route path={appRoutes.CHAT} element={<ChatPage />}></Route>
+              <Route
+                path={appRoutes.TODO}
+                element={
+                  <Typography>
+                    TODO: What will you build??{" "}
+                    <span role="img" aria-label="smile">
+                      😁
+                    </span>
+                  </Typography>
+                }
+              ></Route>
+            </Routes>
+          </AppShell>
+        </StylesProvider>
       </MuiThemeProvider>
     </HashRouter>
   );
