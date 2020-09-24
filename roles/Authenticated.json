@@ -60,6 +60,10 @@
             {
                 "Level": 15,
                 "Name": "$timer/#"
+            },
+            {
+                "Level": 3,
+                "Name": "chat"
             }
         ],
         "Triggers": {
